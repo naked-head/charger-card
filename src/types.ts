@@ -22,6 +22,7 @@ export interface cardEntity{
   attribute?: string;
   text?: string;
   unit_show?: boolean;
+  stat_img?: string;
   [propName: string]: any;
 }
 export interface cardServiceEntity{
