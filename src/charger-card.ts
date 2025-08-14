@@ -71,10 +71,26 @@ export class ChargerCard extends LitElement {
 
 
   get image() {
-    let image;
-    if (this.config.customImage !== undefined && this.config.customImage !== null && this.config.customImage !== '') {
+    let status;
+    let image, stat_img;
+    
+    const carddata_status = this.getCardData(this.getConfig("details.status"));
+    if (carddata_status !== null && carddata_status !== undefined) {
+      if(typeof carddata_status == 'object'){
+        status = (carddata_status["useval"] !== undefined && carddata_status["useval"] !== null) ? carddata_status["useval"] : carddata_status["text"]
+      }else{
+        status = carddata_status;
+      }
+      stat_img = carddata_status["stat_img"] ? carddata_status["stat_img"] : ''
+    } else {
+      status = this.entity != undefined ? this.entity["state"] : null;
+    }
+    
+    if (this.config.customImage !== undefined && this.config.customImage !== null && this.config.customImage !== '' && status === 'default' ) {
       // For images in www try path \local\image.png
       image = this.config.customImage;
+    } else if ( status !== 'default' && stat_img !== '' && stat_img !== null && stat_img !== undefined ) {
+      image = stat_img;
     } else {
       return cconst.CHARGER_IMAGES[this.config.chargerImage] || cconst.CHARGER_IMAGES[cconst.DEFAULT_IMAGE];
     }
@@ -375,7 +391,7 @@ export class ChargerCard extends LitElement {
 
   getConfig(cvar) {
     try {
-      const cvararray = cvar.split(".");
+      const cvararray = cvar.split(".");details.status
       let val;
       if (cvararray.length > 1 && cvararray[0]=="details" && this.config.details !== undefined) {
         val = this.config["details"][cvararray[1]];
@@ -662,8 +678,7 @@ export class ChargerCard extends LitElement {
         status = carddata_status;
       }
       // status = typeof carddata_status == 'object' ? carddata_status["useval"] : carddata_status;
-      statusunit = carddata_status["unit_show"] ? carddata_status["unit"] : '';
-      statusimg = carddata_status["stat_img"] ? carddata_status["stat_img"] : ''
+      statusunit = carddata_status["unit_show"] ? carddata_status["unit"] : ''
     } else {
       status = this.entity != undefined ? this.entity["state"] : null;
     }
