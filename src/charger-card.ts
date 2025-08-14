@@ -662,7 +662,8 @@ export class ChargerCard extends LitElement {
         status = carddata_status;
       }
       // status = typeof carddata_status == 'object' ? carddata_status["useval"] : carddata_status;
-      statusunit = carddata_status["unit_show"] ? carddata_status["unit"] : ''
+      statusunit = carddata_status["unit_show"] ? carddata_status["unit"] : '';
+      statusimg = carddata_status["stat_img"] ? carddata_status["stat_img"] : ''
     } else {
       status = this.entity != undefined ? this.entity["state"] : null;
     }
