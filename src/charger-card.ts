@@ -391,7 +391,7 @@ export class ChargerCard extends LitElement {
 
   getConfig(cvar) {
     try {
-      const cvararray = cvar.split(".");details.status
+      const cvararray = cvar.split(".");
       let val;
       if (cvararray.length > 1 && cvararray[0]=="details" && this.config.details !== undefined) {
         val = this.config["details"][cvararray[1]];
