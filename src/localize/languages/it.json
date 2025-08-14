@@ -1,0 +1,181 @@
+{
+  "common": {
+    "name": "Scheda Caricatore",
+    "description": "La scheda caricatore consente di controllare il tuo caricatore domestico per veicoli elettrici (o altro).",
+    "version": "Versione",
+    "invalid_configuration": "Configurazione non valida",
+    "show_warning": "Mostra avviso",
+    "show_error": "Mostra errore"
+  },
+  "error": {
+    "missing_entity": "Specificare l'entità è obbligatorio!",
+    "not_available": "Non disponibile",
+    "missing_config": "Errore nella configurazione!",
+    "missing_group": "Nessuna entità definita nel gruppo!"
+  },
+  "states": {
+    "on": "acceso",
+    "off": "spento",
+    "unavailable": "non disponibile"
+  },
+  "editor": {
+    "instruction": "Seleziona l'entità principale e il tipo/marca. La scheda tenterà automaticamente di rilevare gli altri sensori. Se la tua marca non è supportata, puoi scegliere «Altro» e mappare manualmente le entità. In caso di problemi, controlla la configurazione YAML (clicca «Mostra editor di codice»).",
+    "brand": "Marca/Modello (Obbligatorio)",
+    "entity": "Entità principale (Obbligatorio)",
+    "chargerImage": "Immagini e colori predefiniti",
+    "customImage": "Immagine personalizzata (Opzionale - sostituisce l'immagine del caricatore)",
+    "theme": "Tema colori",
+    "compact_view": "Vista compatta",
+    "compact_view_aria_label_on": "Attiva vista compatta",
+    "compact_view_aria_label_off": "Disattiva vista compatta",
+    "show_name": "Mostra nome",
+    "show_name_aria_label_on": "Mostra nome attivato",
+    "show_name_aria_label_off": "Mostra nome disattivato",
+    "show_leds": "Mostra LED",
+    "show_leds_aria_label_on": "Mostra LED animati (sovrapposti all'immagine) attivato",
+    "show_leds_aria_label_off": "Mostra LED animati disattivato",
+    "show_status": "Mostra stato",
+    "show_status_aria_label_on": "Mostra stato attivato",
+    "show_status_aria_label_off": "Mostra stato disattivato",
+    "show_stats": "Mostra tabella dati (statistiche)",
+    "show_stats_aria_label_on": "Mostra tabella dati attivata",
+    "show_stats_aria_label_off": "Mostra tabella dati disattivata",
+    "show_collapsibles": "Mostra menu a scomparsa",
+    "show_collapsibles_aria_label_on": "Mostra menu a scomparsa attivato",
+    "show_collapsibles_aria_label_off": "Mostra menu a scomparsa disattivato",
+    "show_toolbar": "Mostra barra strumenti",
+    "show_toolbar_aria_label_on": "Mostra barra strumenti attivata",
+    "show_toolbar_aria_label_off": "Mostra barra strumenti disattivata",
+    "code_only_note": "Nota: configurazioni avanzate come barra strumenti e tabella dati (statistiche) sono disponibili solo in modalità YAML."
+  },
+  "easee": {
+    "status": {
+      "disconnected": "Disconnesso",
+      "awaiting_start": "In pausa / in attesa di avvio",
+      "charging": "In carica",
+      "completed": "Completato / in attesa del veicolo",
+      "error": "Errore",
+      "ready_to_charge": "Pronto alla carica"
+    },
+    "substatus": {
+      "ok": "Ok",
+      "pending_schedule": "In attesa di programmazione",
+      "none": "Nessuno",
+      "max_circuit_current_too_low": "Corrente massima circuito troppo bassa",
+      "max_dynamic_circuit_current_too_low": "Corrente dinamica massima circuito troppo bassa",
+      "max_dynamic_charger_current_too_low": "Corrente dinamica massima caricatore troppo bassa",
+      "max_dynamic_offline_fallback_circuit_current_too_low": "Corrente dinamica offline circuito troppo bassa",
+      "max_charger_current_too_low": "Corrente massima caricatore troppo bassa",
+      "circuit_fuse_too_low": "Fusibile circuito troppo basso",
+      "waiting_in_queue": "In attesa in coda",
+      "waiting_in_fully": "In attesa di completamento",
+      "illegal_grid_type": "Tipo di rete non valido",
+      "no_current_request": "Nessuna richiesta di corrente",
+      "not_requesting_current": "Non sta richiedendo corrente",
+      "charger_disabled": "Caricatore disabilitato",
+      "pending_authorization": "In attesa di autorizzazione",
+      "charger_in_error_state": "Caricatore in stato di errore",
+      "undefined": "Non definito"
+    },
+    "common": {
+      "click_for_group1": "Clicca per limiti",
+      "click_for_group2": "Clicca per informazioni",
+      "click_for_group3": "Clicca per configurazione",
+      "start": "Avvia",
+      "continue": "Riprendi",
+      "pause": "Pausa",
+      "stop": "Ferma",
+      "resume": "Riprendi",
+      "override": "Ignora programmazione",
+      "update": "Aggiorna firmware",
+      "reboot": "Riavvia caricatore",
+      "not_available": "Caricatore non disponibile",
+      "online": "Online",
+      "voltage": "Tensione",
+      "power": "Potenza",
+      "current": "Corrente",
+      "charger_current": "Corrente caricatore",
+      "energy_per_hour": "Energia per ora",
+      "session_energy": "Energia sessione",
+      "lifetime_energy": "Energia totale",
+      "circuit_current": "Corrente circuito",
+      "dyn_charger_limit": "Limite dinamico caricatore",
+      "dyn_circuit_limit": "Limite dinamico circuito",
+      "max_charger_limit": "Limite massimo caricatore",
+      "max_circuit_limit": "Limite massimo circuito",
+      "output_limit": "Corrente consentita",
+      "used_limit": "Limite utilizzato",
+      "offline_circuit_limit": "Limite circuito offline",
+      "enabled": "Abilitato",
+      "idle_current": "Corrente a riposo",
+      "cable_locked": "Cavo bloccato",
+      "perm_cable_locked": "Cavo bloccato permanentemente",
+      "smart_charging": "Ricarica intelligente",
+      "cost_per_kwh": "Costo per kWh",
+      "update_available": "Aggiornamento disponibile",
+      "schedule": "Programmazione"
+    }
+  },
+  "vwegolf": {
+    "status": {
+      "home": "A casa",
+      "away": "Fuori casa"
+    },
+    "substatus": {
+      "ok": "Ok"
+    },
+    "common": {
+      "click_for_group1": "Clicca per blocchi",
+      "click_for_group2": "Clicca per informazioni",
+      "click_for_group3": "Clicca per configurazione",
+      "soc": "%SOC"
+    }
+  },
+  "test": {
+    "status": {
+      "disconnected": "Disconnesso",
+      "awaiting_start": "In pausa o in attesa di avvio",
+      "charging": "In carica",
+      "completed": "Completato o in attesa del veicolo",
+      "error": "Errore",
+      "ready_to_charge": "Pronto alla carica"
+    },
+    "substatus": {
+      "ok": "Ok",
+      "pending_schedule": "In attesa di programmazione",
+      "none": "Nessuno",
+      "max_circuit_current_too_low": "Corrente massima circuito troppo bassa",
+      "max_dynamic_circuit_current_too_low": "Corrente dinamica massima circuito troppo bassa",
+      "max_dynamic_charger_current_too_low": "Corrente dinamica massima caricatore troppo bassa",
+      "max_dynamic_offline_fallback_circuit_current_too_low": "Corrente dinamica offline circuito troppo bassa",
+      "max_charger_current_too_low": "Corrente massima caricatore troppo bassa",
+      "circuit_fuse_too_low": "Fusibile circuito troppo basso",
+      "waiting_in_queue": "In attesa in coda",
+      "waiting_in_fully": "In attesa di completamento",
+      "illegal_grid_type": "Tipo di rete non valido",
+      "no_current_request": "Nessuna richiesta di corrente",
+      "not_requesting_current": "Non sta richiedendo corrente",
+      "charger_disabled": "Caricatore disabilitato",
+      "pending_authorization": "In attesa di autorizzazione",
+      "charger_in_error_state": "Caricatore in stato di errore",
+      "undefined": "Non definito"
+    },
+    "common": {
+      "start": "Avvia",
+      "continue": "Riprendi",
+      "pause": "Pausa",
+      "stop": "Ferma",
+      "override": "Ignora programmazione",
+      "reboot": "Riavvia caricatore",
+      "not_available": "Caricatore non disponibile",
+      "online": "Online",
+      "voltage": "Tensione",
+      "power": "Potenza",
+      "charger_current": "Corrente caricatore",
+      "energy_per_hour": "Energia per ora",
+      "lifetime_energy": "Energia totale",
+      "circuit_current": "Energia circuito",
+      "schedule": "Programmazione"
+    }
+  }
+}
